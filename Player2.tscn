@@ -1,0 +1,57 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://KinematicBody2D2.gd" type="Script" id=1]
+[ext_resource path="res://Sprite_Barco2/sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprite_Barco2/sprite_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprite_Barco2/sprite_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprite_Barco2/sprite_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprite_Barco2/sprite_4.png" type="Texture" id=6]
+[ext_resource path="res://Sprite_Barco2/sprite_5.png" type="Texture" id=7]
+[ext_resource path="res://Sprite_Barco2/sprite_6.png" type="Texture" id=8]
+[ext_resource path="res://Sprite_Barco2/sprite_7.png" type="Texture" id=9]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.77822
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 24.7483
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "MEDIO",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "RAPIDO",
+"speed": 100.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "DEVAGAR",
+"speed": 24.0
+} ]
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 3.44939, 0 )
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.9557, 0.174576 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -6.10895, 1.1003 )
+rotation = 1.5708
+scale = Vector2( 0.345107, 0.345107 )
+frames = SubResource( 3 )
+animation = "RAPIDO"
+frame = 7
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

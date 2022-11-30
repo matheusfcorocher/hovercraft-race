@@ -1,0 +1,266 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprite_Tile/terrain_atlas.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 15.1447
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.10776
+height = 1.10909
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 16, 9 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 14.0
+
+[node name="Map" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 704, 288, 32, 32 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 320, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 672, 544, 32, 32 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 384, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 736, 544, 32, 32 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( 416.469, 64 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 448, 32, 32 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( 416, 64 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 448, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite17"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite17/StaticBody2D"]
+position = Vector2( 16.2262, 15.4715 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( 448, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 448, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite18"]
+position = Vector2( 8.79962, 17.3614 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite18/StaticBody2D"]
+position = Vector2( 3.05176e-005, 0.951309 )
+shape = SubResource( 2 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 352, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 704, 544, 32, 32 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 64, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 736, 160, 32, 32 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 672, 160, 32, 32 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 96, 32 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 704, 160, 32, 32 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 192, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 288, 64, 64 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 96, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 960, 0, 64, 160 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 384, 128 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 384, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/StaticBody2D"]
+position = Vector2( 10, 16 )
+shape = SubResource( 3 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 311, 128 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 384, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite8/StaticBody2D"]
+position = Vector2( 23, 16 )
+shape = SubResource( 3 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 352, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 352, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite20/StaticBody2D"]
+position = Vector2( 16, 9 )
+shape = SubResource( 4 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 352, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 224, 416, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite21/StaticBody2D"]
+position = Vector2( 16, 23 )
+shape = SubResource( 4 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 311, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 352, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite9/StaticBody2D"]
+position = Vector2( 24.42, 21.99 )
+shape = SubResource( 5 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 384, 96 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 352, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite10/StaticBody2D"]
+position = Vector2( 7.57, 21.88 )
+shape = SubResource( 5 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 384, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 256, 416, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite11/StaticBody2D"]
+position = Vector2( 7.57, 7.34 )
+shape = SubResource( 5 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 311, 160 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 416, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite12/StaticBody2D"]
+position = Vector2( 24.35, 7.57 )
+shape = SubResource( 5 )

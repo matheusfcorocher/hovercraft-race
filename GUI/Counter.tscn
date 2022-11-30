@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui_gui_design/ui_gui_design/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://Sprites_Bandeiras/sprite_0.png" type="Texture" id=2]
+
+[node name="Counter" type="NinePatchRect"]
+margin_right = 49.0
+margin_bottom = 22.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 8, 8, 8, 8 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -30.6147
+margin_top = -27.677
+margin_right = 161.385
+margin_bottom = 164.323
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 26.0
+margin_bottom = 7.0
+text = "0"
+align = 1
