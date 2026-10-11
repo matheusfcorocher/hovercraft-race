@@ -1,0 +1,18 @@
+# Godot 4
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# .NET
+bin/
+obj/
+*.user
+TestResults/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# gdUnit4 test adapter (generated at test run)
+gdunit4_testadapter_v5/
