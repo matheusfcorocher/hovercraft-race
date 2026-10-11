@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://TERRENO1.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/tilesets/terrain_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://LinhaChegada.tscn" type="PackedScene" id=4]

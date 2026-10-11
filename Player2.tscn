@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://KinematicBody2D2.gd" type="Script" id=1]
-[ext_resource path="res://Sprite_Barco2/sprite_0.png" type="Texture" id=2]
-[ext_resource path="res://Sprite_Barco2/sprite_1.png" type="Texture" id=3]
-[ext_resource path="res://Sprite_Barco2/sprite_2.png" type="Texture" id=4]
-[ext_resource path="res://Sprite_Barco2/sprite_3.png" type="Texture" id=5]
-[ext_resource path="res://Sprite_Barco2/sprite_4.png" type="Texture" id=6]
-[ext_resource path="res://Sprite_Barco2/sprite_5.png" type="Texture" id=7]
-[ext_resource path="res://Sprite_Barco2/sprite_6.png" type="Texture" id=8]
-[ext_resource path="res://Sprite_Barco2/sprite_7.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_0.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_3.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_4.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_5.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_6.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/hovercraft_green/frame_7.png" type="Texture" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 8.77822
