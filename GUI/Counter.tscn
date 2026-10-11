@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://ui_gui_design/ui_gui_design/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://GUI/assets/label_bg.png" type="Texture" id=1]
 [ext_resource path="res://Sprites_Bandeiras/sprite_0.png" type="Texture" id=2]
 
 [node name="Counter" type="NinePatchRect"]
