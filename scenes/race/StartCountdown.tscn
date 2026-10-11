@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/Game/Race/StartCountdown.cs" id="1_script"]
+[ext_resource type="FontFile" path="res://assets/fonts/mario_kart_ds.ttf" id="2_font"]
+
+[node name="StartCountdown" type="CanvasLayer" node_paths=PackedStringArray("Label")]
+process_mode = 3
+layer = 10
+script = ExtResource("1_script")
+Label = NodePath("Center/Label")
+
+[node name="Center" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Center"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.0235294, 0.0235294, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 110
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1

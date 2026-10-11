@@ -1,0 +1,17 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+    <RootNamespace>HovercraftRace</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Sibling .NET projects compile on their own; keep their sources out of the game assembly. -->
+    <Compile Remove="src/Core/**;tests/Core.Tests/**" />
+    <ProjectReference Include="src/Core/HovercraftRace.Core.csproj" />
+  </ItemGroup>
+
+</Project>

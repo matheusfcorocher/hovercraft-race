@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/vehicles/Hovercraft.tscn" id="1_base"]
+[ext_resource type="SpriteFrames" path="res://assets/sprites/hovercraft_red/hovercraft_red.tres" id="2_frames"]
+
+[node name="HovercraftRed" instance=ExtResource("1_base")]
+
+[node name="Sprite" parent="." index="1"]
+sprite_frames = ExtResource("2_frames")
+animation = &"slow"

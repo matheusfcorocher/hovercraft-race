@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/Game/Main/RaceWorld.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/track/Track.tscn" id="2_track"]
+[ext_resource type="PackedScene" path="res://scenes/race/FinishLine.tscn" id="3_finish"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/HovercraftRed.tscn" id="4_red"]
+[ext_resource type="PackedScene" path="res://scenes/vehicles/HovercraftGreen.tscn" id="5_green"]
+
+[node name="RaceWorld" type="Node2D" node_paths=PackedStringArray("Track", "PlayerOne", "PlayerTwo")]
+script = ExtResource("1_script")
+Track = NodePath("Track")
+PlayerOne = NodePath("PlayerOne")
+PlayerTwo = NodePath("PlayerTwo")
+
+[node name="Track" parent="." instance=ExtResource("2_track")]
+
+[node name="FinishLine" parent="." instance=ExtResource("3_finish")]
+position = Vector2(160, 960)
+
+[node name="PlayerOne" parent="." instance=ExtResource("4_red")]
+position = Vector2(214, 780.4)
+rotation = -1.5708
+InputPrefix = "p1"
+
+[node name="PlayerTwo" parent="." instance=ExtResource("5_green")]
+position = Vector2(133.4, 773)
+rotation = -1.5708
+InputPrefix = "p2"

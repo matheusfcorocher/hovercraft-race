@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/Game/Race/FinishLine.cs" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/sprites/flags/flag_2.png" id="2_flag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_line"]
+size = Vector2(384, 18.7)
+
+[node name="FinishLine" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_script")
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(0, -96)
+scale = Vector2(2, 1)
+texture = ExtResource("2_flag")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_line")

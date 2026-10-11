@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://src/Game/UI/LapCounterHud.cs" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/label_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/flags/flag_0.png" id="3_flag"]
+
+[node name="LapCounterHud" type="NinePatchRect" node_paths=PackedStringArray("LapsLabel")]
+custom_minimum_size = Vector2(49, 22)
+offset_right = 49.0
+offset_bottom = 22.0
+texture = ExtResource("2_bg")
+region_rect = Rect2(8, 8, 8, 8)
+script = ExtResource("1_script")
+LapsLabel = NodePath("Laps")
+
+[node name="Flag" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -30.6
+offset_top = -27.7
+offset_right = 161.4
+offset_bottom = 164.3
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+texture = ExtResource("3_flag")
+
+[node name="Laps" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.0
+offset_right = 26.0
+offset_bottom = 11.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

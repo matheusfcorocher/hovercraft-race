@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/Game/Vehicles/Hovercraft.cs" id="1_script"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 24.0
+
+[node name="Hovercraft" type="CharacterBody2D" node_paths=PackedStringArray("Sprite")]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_script")
+Sprite = NodePath("Sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_body")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.35, 0.35)

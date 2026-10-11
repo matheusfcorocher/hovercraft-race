@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://src/Game/Main/SplitScreenRace.cs" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/world/RaceWorld.tscn" id="2_world"]
+[ext_resource type="PackedScene" path="res://scenes/main/PlayerView.tscn" id="3_view"]
+[ext_resource type="PackedScene" path="res://scenes/main/MinimapView.tscn" id="4_minimap"]
+[ext_resource type="PackedScene" path="res://scenes/race/StartCountdown.tscn" id="5_countdown"]
+
+[node name="Main" type="Node" node_paths=PackedStringArray("Simulation", "World", "LeftView", "RightView", "Minimap")]
+script = ExtResource("1_script")
+Simulation = NodePath("Simulation")
+World = NodePath("Simulation/RaceWorld")
+LeftView = NodePath("Views/LeftView")
+RightView = NodePath("Views/RightView")
+Minimap = NodePath("Minimap")
+
+[node name="Simulation" type="SubViewport" parent="."]
+size = Vector2i(2, 2)
+render_target_update_mode = 0
+
+[node name="RaceWorld" parent="Simulation" instance=ExtResource("2_world")]
+
+[node name="Views" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="LeftView" parent="Views" instance=ExtResource("3_view")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightView" parent="Views" instance=ExtResource("3_view")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Minimap" parent="." instance=ExtResource("4_minimap")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -221.0
+offset_right = 124.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartCountdown" parent="." instance=ExtResource("5_countdown")]
