@@ -14,4 +14,12 @@
     <ProjectReference Include="src/Core/HovercraftRace.Core.csproj" />
   </ItemGroup>
 
+  <!-- Integration and end-to-end tests run inside Godot via gdUnit4 (`dotnet test`, needs GODOT_BIN). -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="gdUnit4.api" Version="5.0.0" />
+    <PackageReference Include="gdUnit4.test.adapter" Version="3.0.0" />
+    <PackageReference Include="gdUnit4.analyzers" Version="1.0.0" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+  </ItemGroup>
+
 </Project>

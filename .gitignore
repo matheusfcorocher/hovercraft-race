@@ -13,3 +13,6 @@ TestResults/
 # OS
 Thumbs.db
 .DS_Store
+
+# gdUnit4 test adapter (generated at test run)
+gdunit4_testadapter_v5/
